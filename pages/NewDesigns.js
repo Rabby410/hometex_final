@@ -1,4 +1,4 @@
-import Prefooter from '@/components/layout/Prefooter'
+import Prefooter2 from '@/components/layout/Prefooter2'
 import DesignEight from '@/components/newDesigns/DesignEight'
 import DesignEleven from '@/components/newDesigns/DesignEleven'
 import DesignFive from '@/components/newDesigns/DesignFive'
@@ -28,7 +28,7 @@ const NewDesigns = () => {
     <DesignEleven />
     <DewsignTen />
     <DesignTwilve />
-    <Prefooter/>
+    <Prefooter2/>
 
     </>
   )

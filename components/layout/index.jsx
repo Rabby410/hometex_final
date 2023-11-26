@@ -1,4 +1,5 @@
 import Footer from "./Footer";
+import Footer2 from "./Footer2";
 import Header from "./Header";
 import Header2 from "./Header2";
 
@@ -8,7 +9,7 @@ const Layout = ({children}) => {
         <div className="app__wrapper">
             <Header2 key="header" />
             {children}
-            <Footer key="footer" />
+            <Footer2 key="footer" />
         </div>
      );
 }
