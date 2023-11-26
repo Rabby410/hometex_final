@@ -21,7 +21,7 @@ const Prefooter2 = () => {
               </div>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 px-2 sm:px-4 py-2.5 w-full">
                 <div>
-                  <img src="https://static-01.daraz.com.bd/p/63ed98f8f1c39bd6bffc8f72c1534172.jpg" alt="Hometex Blog" />
+                  <img src="/images/blog/b1.jpg" alt="Hometex Blog" />
                 </div>
                 <div className="relative justify-center items-center text-center">
                     <h3 className="text-xl font-extrabold p-3">DAILY OUTFITS</h3>
