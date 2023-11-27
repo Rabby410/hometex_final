@@ -35,6 +35,7 @@ export async function getServerSideProps(context) {
 }
 
 const Product = ({ product }) => {
+  const [selectedAttribute, setSelectedAttribute] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
@@ -62,11 +63,41 @@ const Product = ({ product }) => {
     });
   };
 
+  
   const image_URL = `${Constants.BASE_URL}/images/uploads/product`;
 
   const { addItemToCart } = useContext(CartContext);
 
   const [product_qty, setProductQty] = useState(1);
+
+  const handleAttributeChange = (selectedValue) => {
+    const selectedAttribute = product.product_attributes.find(
+      (attribute) => attribute.attribute_value.name === selectedValue
+    );
+
+    setSelectedAttribute(selectedAttribute);
+  };
+
+  const getPrice = () => {
+    if (selectedAttribute) {
+      const { attribute_math_sign, attribute_number } = selectedAttribute;
+      
+      switch (attribute_math_sign) {
+        case '+':
+          return product.price + attribute_number;
+        case '-':
+          return product.price - attribute_number;
+        case '*':
+          return product.price * attribute_number;
+        case '/':
+          return product.price / attribute_number;
+        default:
+          return product.price;
+      }
+    }
+  
+    return product.price;
+  };
 
   // Recent view items
   useEffect(() => {
@@ -104,7 +135,7 @@ const Product = ({ product }) => {
       supplier_id: product.supplier_id,
       quantity: product_qty,
       sku: product.sku,
-      total_price: product.price * product_qty,
+      total_price: getPrice() * product_qty,
     });
   };
 
@@ -279,6 +310,8 @@ const Product = ({ product }) => {
   // console.log(product)
   if (!product) return <div>Loading...</div>;
 
+  
+
   return (
     <div>
       <div className="max-w-screen-2xl mx-auto px-3">
@@ -315,7 +348,8 @@ const Product = ({ product }) => {
             </div>
             <hr className="border-t my-1" />
             <p className="text-lg font-semibold mb-4">
-              Price: <span className="text-xl font-extrabold">৳</span> {product.price}
+              Price: <span className="text-xl font-extrabold">৳</span>{" "}
+              {getPrice()}
             </p>
             <hr className="border-t my-1" />
             <div className="mt-2">
@@ -350,11 +384,22 @@ const Product = ({ product }) => {
             <div className="mb-2">
               <p className="font-semibold mb-2">Available Options</p>
               <p>{product.sub_category?.name} Size</p>
-              <select className="border w-full p-2 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline-gray">
-                <option value="option1">
-                  {product.child_sub_category?.name}
-                </option>
-              </select>
+              {product.product_attributes.length > 0 && (
+                <select
+                  className="border w-full p-2 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline-gray"
+                  onChange={(e) => handleAttributeChange(e.target.value)}
+                >
+                  <option value="default">Select an option</option>
+                  {product.product_attributes.map((attribute) => (
+                    <option
+                      key={attribute.id}
+                      value={attribute.attribute_value.name}
+                    >
+                      {attribute.attribute_value.name}
+                    </option>
+                  ))}
+                </select>
+              )}
             </div>
             <div className="flex pt-2 gap-2">
               <div>
