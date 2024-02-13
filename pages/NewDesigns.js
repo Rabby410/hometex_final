@@ -7,6 +7,7 @@ import DesignNine from '@/components/newDesigns/DesignNine'
 import DesignOne from '@/components/newDesigns/DesignOne'
 import DesignSeven from '@/components/newDesigns/DesignSeven'
 import DesignSix from '@/components/newDesigns/DesignSix'
+import DesignThirteen from '@/components/newDesigns/DesignThirteen'
 import DesignThree from '@/components/newDesigns/DesignThree'
 import DesignTwilve from '@/components/newDesigns/DesignTwilve'
 import DesignTwo from '@/components/newDesigns/DesignTwo'
@@ -29,6 +30,7 @@ const NewDesigns = () => {
     <DewsignTen />
     <DesignTwilve />
     <Prefooter2/>
+    <DesignThirteen/>
 
     </>
   )
