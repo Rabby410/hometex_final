@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useState, useEffect } from "react";
+import Swal from 'sweetalert2';
 
 const CartContext = createContext();
 export const CartProvider = ({ children }) => {
@@ -28,8 +29,22 @@ export const CartProvider = ({ children }) => {
       newCartItems = cart?.cartItems?.map((i) =>
         i.product_id === isItemExist.product_id ? item : i
       );
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: `Updated quantity for ${name}.`,
+        showConfirmButton: false,
+        timer: 1500
+      });
     } else {
       newCartItems = [...(cart?.cartItems || []), item];
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: `Added ${name} to your cart.`,
+        showConfirmButton: false,
+        timer: 1500
+      });
     }
 
     localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
