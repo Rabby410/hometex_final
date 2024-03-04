@@ -175,7 +175,7 @@ const Header2 = () => {
   return (
     <>
       {/* Top Section Start*/}
-      <div className="bg-[#fef200] px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <div className="bg-[#fff] px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-2xl mx-auto px-3">
           <div className="flex flex-col sm:flex-row sm:justify-between text-dark">
             <div className="flex items-center text-black text-sm">
