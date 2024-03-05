@@ -163,7 +163,7 @@ const Header = () => {
   return (
     <>
       {/* Top Section Start*/}
-      <div className="bg-[#fef200] px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <div className="px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600" style={{background: "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)"}}>
         <div className="max-w-screen-2xl mx-auto px-3">
           <div className="flex flex-col sm:flex-row sm:justify-end text-dark">
             <div className="relative" ref={dropdownRef}>

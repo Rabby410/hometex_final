@@ -284,7 +284,7 @@ const Header2 = () => {
       {/* Top Section End*/}
 
       {/* Mid Section Start*/}
-      <div className="bg-white sticky top-0 z-20 ">
+      <div className="sticky top-0 z-20 " style={{background: "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)"}}>
         <div className="max-w-screen-xl mx-auto px-3 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 left-0 border-b border-gray-200 dark:border-gray-600 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 place-content-center text-center">
           <div className="justify-center w-full md:w-auto">
             <Link href="/" className="flex justify-center">
