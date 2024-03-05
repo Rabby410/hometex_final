@@ -21,8 +21,23 @@ import { API_BASE_URL } from "@/ults/Constant";
 import { setCookie, getCookie, deleteCookie } from "cookies-next";
 import Constants from "../../ults/Constant";
 import WishListContext from "@/context/WishListContext";
+import Modal from "./Modal";
 
 const Header2 = () => {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const products = [
+    // Example product data; you would fetch this from your backend or service
+    { name: 'Product 1', image: 'https://htbapi.hometexbd.ltd/images/uploads/product_thumb/rosario-thu-nov-2-2023-650-pm-87312.jpeg', price: '20.00', originalPrice: '40.00', discount: '50' },
+    { name: 'Product 2', image: 'https://htbapi.hometexbd.ltd/images/uploads/product_thumb/burbot-thu-nov-2-2023-744-pm-57895.jpeg', price: '20.00', originalPrice: '40.00', discount: '50' },
+    { name: 'Product 3', image: 'https://htbapi.hometexbd.ltd/images/uploads/product_thumb/beboon-thu-nov-2-2023-758-pm-30205.jpeg', price: '20.00', originalPrice: '40.00', discount: '50' },
+    { name: 'Product 4', image: 'https://htbapi.hometexbd.ltd/images/uploads/product_thumb/brownie-thu-nov-2-2023-808-pm-85665.jpeg', price: '20.00', originalPrice: '40.00', discount: '50' },
+    { name: 'Product 5', image: 'https://htbapi.hometexbd.ltd/images/uploads/product_thumb/unicorn-thu-nov-2-2023-821-pm-91981.jpeg', price: '20.00', originalPrice: '40.00', discount: '50' },
+    { name: 'Product 6', image: 'https://htbapi.hometexbd.ltd/images/uploads/product_thumb/mogra-thu-nov-2-2023-835-pm-92146.jpeg', price: '20.00', originalPrice: '40.00', discount: '50' },
+    // Add more product objects here
+  ];
+
+  const saleEndTime = '2024-04-30T23:59:59';
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const toggleDropdown = () => {
@@ -110,14 +125,14 @@ const Header2 = () => {
     console.log(`Searching for: ${inputValue}`);
     // Add your logic to navigate or display search results here
   };
-  
+
   const handleKeyDown = (event) => {
     // Trigger the search when the user presses Enter
     if (event.key === "Enter") {
       handleSearchClick();
     }
   };
-  
+
   //
 
   const [isSubmit, setIsSubmit] = useState(false);
@@ -182,6 +197,18 @@ const Header2 = () => {
               <span className="mr-2">24/7 customer service +8801971663839</span>
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-end">
+              <div>
+                <button onClick={() => setIsModalOpen(true)} className="text-black hover:bg-[#86efac] focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-1 text-center mb-2 sm:mb-0 sm:mr-3 md:mr-0 dark:bg-[#15803d] dark:hover:bg-[#15803d] dark:focus:ring-green-800">
+                  Daily Deals
+                </button>
+                <Modal
+                  isOpen={isModalOpen}
+                  closeModal={() => setIsModalOpen(false)}
+                  saleEndTime={saleEndTime}
+                  products={products}
+                />
+              </div>
+              <span className="px-3">/</span>
               <div className="relative" ref={dropdownRef}>
                 <button
                   type="button"
@@ -520,7 +547,7 @@ const Header2 = () => {
               >
                 Find A Store
               </Link>
-              <div className="relative z-50" ref={cartRef}>
+              <div className="relative" ref={cartRef}>
                 <div className="relative">
                   <button
                     onClick={handleCartClick}
