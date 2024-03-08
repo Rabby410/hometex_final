@@ -5,7 +5,7 @@ const BannerTop = () => {
     <>
         <div className="max-w-screen-2xl mx-auto px-3 mb-5 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-[url('/images/bannertop/Living.jpg')] w-[100%] h-[290px] ">
-            <div className="w-full max-w-sm  hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px] ">
+            <div className="w-auto md:w-full max-w-sm  hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px] ">
                 <div className="flex flex-col items-center pb-10 px-8 pt-8">
                     <h2 className="mb-1 text-[35px] font-medium text-white dark:text-white">Living Decor</h2>
                     <div className="flex mt-4 space-x-3 md:mt-6">
@@ -15,7 +15,7 @@ const BannerTop = () => {
                 </div>
             </div>
             <div className="bg-[url('/images/bannertop/Bed.jpg')] w-[100%] h-[290px]">
-            <div className="justify-items-center w-full max-w-sm  hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px]">
+            <div className="justify-items-center w-auto md:w-full max-w-sm  hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px]">
                 <div className="flex flex-col items-center pb-10 px-8 pt-8">
                     <h2 className="mb-1 text-[35px] font-medium text-white dark:text-white">Bedding</h2>
                     <div className="flex mt-4 space-x-3 md:mt-6">
@@ -25,7 +25,7 @@ const BannerTop = () => {
             </div>
             </div>
             <div className="bg-[url('/images/bannertop/Bathing.jpg')] w-[100%] h-[290px]">
-            <div className="justify-items-center w-full max-w-sm hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px]">
+            <div className="justify-items-center w-auto md:w-full max-w-sm hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px]">
                 <div className="flex flex-col items-center pb-10 px-8 pt-8">
                     <h2 className="mb-1 text-[35px] font-medium text-white dark:text-white">Bath Support</h2>
                     <div className="flex mt-4 space-x-3 md:mt-6">
@@ -37,7 +37,7 @@ const BannerTop = () => {
         </div>
         <div className="max-w-screen-2xl mx-auto px-3 mb-5 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-[url('/images/bannertop/Curtainssss.jpg')] w-[100%] h-[290px] ">
-            <div className="w-full max-w-sm  hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px] ">
+            <div className="w-auto md:w-full max-w-sm  hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px] ">
                 <div className="flex flex-col items-center pb-10 px-8 pt-8">
                     <h2 className="mb-1 text-[35px] font-medium text-white dark:text-white">Curtain | Blind</h2>
                     <div className="flex mt-4 space-x-3 md:mt-6">
@@ -47,7 +47,7 @@ const BannerTop = () => {
             </div>
             </div>
             <div className="bg-[url('/images/bannertop/Pillow.jpg')] w-[100%] h-[290px]">
-            <div className="justify-items-center w-full max-w-sm  hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px]">
+            <div className="justify-items-center w-auto md:w-full max-w-sm  hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px]">
                 <div className="flex flex-col items-center pb-10 px-8 pt-8">
                     <h2 className="mb-1 text-[35px] font-medium text-white dark:text-white">Pillow | Sham</h2>
                     <div className="flex mt-4 space-x-3 md:mt-6">
@@ -57,7 +57,7 @@ const BannerTop = () => {
             </div>
             </div>
             <div className="bg-[url('/images/bannertop/Table.jpg')] w-[100%] h-[290px]">
-            <div className="justify-items-center w-full max-w-sm hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px]">
+            <div className="justify-items-center w-auto md:w-full max-w-sm hover:bg-[#66666691] transition delay-150 duration-300 ease-in-out mt-[65px] ml-[54px]">
                 <div className="flex flex-col items-center pb-10 px-8 pt-8">
                     <h2 className="mb-1 text-[35px] font-medium text-white dark:text-white">Kitchen | Dining</h2>
                     <div className="flex mt-4 space-x-3 md:mt-6">
