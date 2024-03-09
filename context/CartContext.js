@@ -15,9 +15,9 @@ export const CartProvider = ({ children }) => {
   };
 
   // add or update item in cart 
-  const addItemToCart = async ({ product_id, name, price, image, in_stock, supplier_id, quantity = 1, sku, total_price }) => {
+  const addItemToCart = async ({ product_id, name, category_id, sub_category_id, child_sub_category_id, price, image, in_stock, supplier_id, quantity = 1, sku, total_price }) => {
     const item = {
-      product_id, name, price, image, in_stock, supplier_id, quantity, sku, total_price
+      product_id, name, category_id, sub_category_id, child_sub_category_id, price, image, in_stock, supplier_id, quantity, sku, total_price
     };
     // Check item exist or not 
     // if item exist update item or add new item 
