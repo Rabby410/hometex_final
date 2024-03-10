@@ -19,6 +19,19 @@ import Blog from "@/components/home/Blog";
 import Pillow from "@/components/home/Pillow";
 import { Sticky } from "@/components/home/Sticky";
 import Constants from "@/ults/Constant";
+import DesignSix from "@/components/newDesigns/DesignSix";
+import DesignOne from "@/components/newDesigns/DesignOne";
+import DesignTwo from "@/components/newDesigns/DesignTwo";
+import DesignFifteen from "@/components/newDesigns/DesignFifteen";
+import DesignEight from "@/components/newDesigns/DesignEight";
+import DesignThree from "@/components/newDesigns/DesignThree";
+import DesignFive from "@/components/newDesigns/DesignFive";
+import DesignSeven from "@/components/newDesigns/DesignSeven";
+import DesignEleven from "@/components/newDesigns/DesignEleven";
+import DesignFour from "@/components/newDesigns/DesignFour";
+import DesignNine from "@/components/newDesigns/DesignNine";
+import DesignTwelve from "@/components/newDesigns/DesignTwilve";
+import Prefooter2 from "@/components/layout/Prefooter2";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -71,22 +84,36 @@ const Home = () => {
           <BsFillArrowUpCircleFill size={32} />
         </button>
       )}
-      <BannerTop />
-      <Sticky />
-      <Policies />
+      <DesignSix/>
+      <DesignOne/>
+      <DesignTwo/>
       <Suspense fallback={<h1>loading</h1>}>
       <ProductsTabs products={products} />
-      <BoxBanner products={products} />
-      <ComfortInBag products={products} />
-      <Satranji products={products} />
-      <NewArrivales products={products} />
-      <Comfoters products={products} />
-      <Curtains products={products} />
-      <Exclusive products={products} />
-      <FeaturedCollection products={products} />
-      <BathSupport products={products} />
-      <Blog />
-      <Pillow products={products} />
+      <DesignFifteen/>
+      <DesignEight/>
+      <DesignThree/>
+      <DesignFive/>
+      <DesignSeven/>
+      <DesignEleven/>
+      <DesignFour/>
+      <DesignNine/>
+      <DesignTwelve/>
+      <Prefooter2/>
+      {/* <BannerTop /> */}
+      {/* <Sticky /> */}
+      {/* <Policies /> */}
+      
+      {/* <BoxBanner products={products} /> */}
+      {/* <ComfortInBag products={products} /> */}
+      {/* <Satranji products={products} /> */}
+      {/* <NewArrivales products={products} /> */}
+      {/* <Comfoters products={products} /> */}
+      {/* <Curtains products={products} /> */}
+      {/* <Exclusive products={products} /> */}
+      {/* <FeaturedCollection products={products} /> */}
+      {/* <BathSupport products={products} /> */}
+      {/* <Blog /> */}
+      {/* <Pillow products={products} /> */}
       </Suspense>
       <Prefooter />
     </>
