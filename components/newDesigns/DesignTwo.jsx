@@ -7,7 +7,7 @@ const DesignTwo = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2 relative">
         <div className="p-4 border-t-2 border-b-2">
           <h2 className="text-xl font-bold mb-2 text-center">
-            Only on <a href="https://hometexbd.ltd">hometexbd.ltd</a>
+            Only on <a href="https://hometex.store">hometex.store</a>
           </h2>
         </div>
 
