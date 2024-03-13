@@ -276,20 +276,7 @@ const Footer2 = () => {
                         href="/"
                         className="flex  hover:underline items-center"
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          className="w-4 h-4"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                          />
-                        </svg>
+                       
                         New Arrivals
                       </Link>
                     </li>
@@ -298,20 +285,7 @@ const Footer2 = () => {
                         href="/"
                         className="flex  hover:underline items-center"
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          className="w-4 h-4"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                          />
-                        </svg>
+                       
                         Gift Certificates
                       </Link>
                     </li>
@@ -320,20 +294,7 @@ const Footer2 = () => {
                         href="/"
                         className="flex  hover:underline items-center"
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          className="w-4 h-4"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                          />
-                        </svg>
+                       
                         Special Offers
                       </Link>
                     </li>
@@ -342,20 +303,7 @@ const Footer2 = () => {
                         href="/"
                         className="flex  hover:underline text-sm items-center"
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          className="w-4 h-4"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                          />
-                        </svg>
+                       
                         Voucher Codes
                       </Link>
                     </li>
