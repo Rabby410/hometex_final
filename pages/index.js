@@ -86,7 +86,7 @@ const Home = () => {
       )}
       <DesignSix/>
       <DesignOne/>
-      <DesignTwo/>
+      {/* <DesignTwo/> */}
       <Suspense fallback={<h1>loading</h1>}>
       <ProductsTabs products={products} />
       <DesignFifteen/>
@@ -115,7 +115,7 @@ const Home = () => {
       {/* <Blog /> */}
       {/* <Pillow products={products} /> */}
       </Suspense>
-      <Prefooter />
+      {/* <Prefooter /> */}
     </>
   );
 };
