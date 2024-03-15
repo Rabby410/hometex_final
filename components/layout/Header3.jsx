@@ -227,411 +227,412 @@ const Header3 = () => {
                         </div>
 
                         <div className='flex flex-auto items-center'>
-                            <div className='flex flex-auto items-center gap-1'><HiOutlineMail /> Corporate Inquaries </div>
+                            
+                            <Link href="/GetAQuote" className='flex flex-auto items-center gap-1'><HiOutlineMail /> Corporate Inquaries</Link>
                             <div className='flex flex-auto items-center gap-1'><HiOutlineTicket /> Order Tracking </div>
                             <div className='flex flex-auto items-center gap-1'><HiOutlineGift /> My Rewards </div>
                             <div className='flex flex-auto items-center gap-1'><FaShippingFast /> Shipping </div>
                         </div>
                     </div>
                 </div>
-                {/* Pre Header end */}
-                <div className='pt-1 sticky top-0 z-20' style={{ position: 'sticky', top: '0px', display: 'block', background: "radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)" }}>
-                    <div className='container mx-auto'>
-                        {/* Mid Header */}
-                        <div className='flex flex-auto gap-2 justify-between items-center mt-3 max-w-7xl mx-auto' >
+            </div>
+
+            {/* Pre Header end */}
+            <div className='pt-1 hidden md:block sticky top-0 z-20' style={{ background: "radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)" }}>
+                <div className='container mx-auto'>
+                    {/* Mid Header */}
+                    <div className='flex flex-auto gap-2 justify-between items-center mt-3 max-w-7xl mx-auto' >
+                        <div className='flex flex-row'>
+                            <div className='px-2 flex flex-col items-center text-center'>
+                                <FaMapMarkerAlt className="h-8 w-8 text-red-600" aria-hidden="true" />
+                                <span className="text-sm mt-2 font-semibold text-gray-800">Find A Store</span>
+                            </div>
+
+                            <Link href="/Contact">
+                                <div className='px-2 flex flex-col items-center text-center'>
+                                    <FaPhoneSquareAlt className="h-8 w-8 text-blue-600" aria-hidden="true" />
+                                    <span className="text-sm mt-2 font-semibold text-gray-800">Customer Service</span>
+                                </div>
+                            </Link>
+
+                            <div className='px-2 flex flex-col items-center text-center'>
+                                <HiOutlineGift className="h-8 w-8 text-red-500" aria-hidden="true" />
+                                <span className="text-sm mt-2 font-semibold text-gray-800">Gift Someone!</span>
+                            </div>
+
+                            <button onClick={() => setIsModalOpen(true)}>
+                                <div className='px-2 flex flex-col items-center text-center'>
+                                    <FaMoneyCheckAlt className="h-8 w-8 text-green-500" aria-hidden="true" />
+                                    <span className="text-sm mt-2 font-semibold text-gray-800">Daily Deals</span>
+                                </div>
+                            </button>
+                            <Modal
+                                isOpen={isModalOpen}
+                                closeModal={() => setIsModalOpen(false)}
+                                saleEndTime={saleEndTime}
+                                products={products}
+                            />
+
+                        </div>
+                        <div className='justify-center w-full md:w-auto'>
+                            <Link href="/" className="flex justify-center">
+                                <img src="/images/hometex-logo.png" alt="Hometex Bangladesh" />
+                            </Link>
+                        </div>
+                        <div>
                             <div className='flex flex-row'>
                                 <div className='px-2 flex flex-col items-center text-center'>
-                                    <FaMapMarkerAlt className="h-8 w-8 text-red-600" aria-hidden="true" />
-                                    <span className="text-sm mt-2 font-semibold text-gray-800">Find A Store</span>
+                                    <FaSearch className="h-8 w-8 text-blue-600" aria-hidden="true" />
+                                    <span className="text-sm mt-2 font-semibold text-gray-800">Search</span>
                                 </div>
 
-                                <Link href="/Contact">
-                                    <div className='px-2 flex flex-col items-center text-center'>
-                                        <FaPhoneSquareAlt className="h-8 w-8 text-blue-600" aria-hidden="true" />
-                                        <span className="text-sm mt-2 font-semibold text-gray-800">Customer Service</span>
-                                    </div>
-                                </Link>
 
-                                <div className='px-2 flex flex-col items-center text-center'>
-                                    <HiOutlineGift className="h-8 w-8 text-red-500" aria-hidden="true" />
-                                    <span className="text-sm mt-2 font-semibold text-gray-800">Gift Someone!</span>
-                                </div>
-
-                                <button onClick={() => setIsModalOpen(true)}>
-                                    <div className='px-2 flex flex-col items-center text-center'>
-                                        <FaMoneyCheckAlt className="h-8 w-8 text-green-500" aria-hidden="true" />
-                                        <span className="text-sm mt-2 font-semibold text-gray-800">Daily Deals</span>
-                                    </div>
-                                </button>
-                                <Modal
-                                    isOpen={isModalOpen}
-                                    closeModal={() => setIsModalOpen(false)}
-                                    saleEndTime={saleEndTime}
-                                    products={products}
-                                />
-
-                            </div>
-                            <div className='justify-center w-full md:w-auto'>
-                                <Link href="/" className="flex justify-center">
-                                    <img src="/images/hometex-logo.png" alt="Hometex Bangladesh" />
-                                </Link>
-                            </div>
-                            <div>
-                                <div className='flex flex-row'>
-                                    <div className='px-2 flex flex-col items-center text-center'>
-                                        <FaSearch className="h-8 w-8 text-blue-600" aria-hidden="true" />
-                                        <span className="text-sm mt-2 font-semibold text-gray-800">Search</span>
-                                    </div>
-
-
-                                    <div className="relative" ref={dropdownRef}>
-                                        <button
-                                            type="button"
-                                            className="flex items-center text-black  focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm text-center mb-2 sm:mb-0 sm:mr-3 md:mr-0 dark:bg-[#15803d] dark:hover:bg-[#15803d] dark:focus:ring-green-800"
-                                            onClick={toggleDropdown}
-                                        >
-                                            <div className='px-2 flex flex-col items-center text-center'>
-                                                <FaUserAlt className="h-8 w-8 text-gray-600" aria-hidden="true" />
-                                                <span className="text-sm mt-2 font-semibold text-gray-800">My Account</span>
-                                            </div>
-                                        </button>
-                                        {isDropdownOpen && (
-                                            <div className="absolute z-50 top-full right-0 bg-white bg-opacity-95 backdrop-filter backdrop-blur-md border border-gray-300 rounded-lg shadow-md py-2">
-                                                {!auth_token && (
-                                                    <>
-                                                        <button
-                                                            className="block w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
-                                                            onClick={togglePopup}
-                                                        >
-                                                            Log In
-                                                        </button>
-
-                                                        <Link href="/account/Register">
-                                                            {" "}
-                                                            <button className="block w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
-                                                                Register
-                                                            </button>
-                                                        </Link>
-                                                    </>
-                                                )}
-
-                                                {auth_token && (
-                                                    <>
-                                                        <Link href="../account/MyAccount">
-                                                            {" "}
-                                                            <button className="block w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
-                                                                Profile
-                                                            </button>
-                                                        </Link>
-
-                                                        <button
-                                                            onClick={signOutSubmitHandler}
-                                                            className="block w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
-                                                        >
-                                                            Signout
-                                                        </button>
-                                                    </>
-                                                )}
-                                            </div>
-                                        )}
-                                    </div>
-
+                                <div className="relative" ref={dropdownRef}>
                                     <button
                                         type="button"
-                                        onClick={handleButtonClick}
-                                        className=""
+                                        className="flex items-center text-black  focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm text-center mb-2 sm:mb-0 sm:mr-3 md:mr-0 dark:bg-[#15803d] dark:hover:bg-[#15803d] dark:focus:ring-green-800"
+                                        onClick={toggleDropdown}
                                     >
                                         <div className='px-2 flex flex-col items-center text-center'>
-                                            <FaHeart className="h-8 w-8 text-red-500" aria-hidden="true" />
-                                            <span className="text-sm mt-2 font-semibold text-gray-700">Wishlist</span>
+                                            <FaUserAlt className="h-8 w-8 text-gray-600" aria-hidden="true" />
+                                            <span className="text-sm mt-2 font-semibold text-gray-800">My Account</span>
                                         </div>
-                                        {auth_token && <span>{wlist?.length || 0}</span>}
                                     </button>
+                                    {isDropdownOpen && (
+                                        <div className="absolute z-50 top-full right-0 bg-white bg-opacity-95 backdrop-filter backdrop-blur-md border border-gray-300 rounded-lg shadow-md py-2">
+                                            {!auth_token && (
+                                                <>
+                                                    <button
+                                                        className="block w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+                                                        onClick={togglePopup}
+                                                    >
+                                                        Log In
+                                                    </button>
 
-                                    <div className="relative" ref={cartRef}>
-                                        <div className="relative">
-                                            <button
-                                                onClick={handleCartClick}
-                                                type="button"
-                                            >
-                                                <div className='px-2 flex flex-col items-center text-center'>
-                                                    <HiShoppingCart className="h-8 w-8 text-blue-500" aria-hidden="true" />
-                                                    <span className="text-sm mt-2 font-semibold text-gray-700">Cart</span>
-                                                </div>
-                                            </button>
-                                            {cartItems?.length > 0 && (
-                                                <span className="absolute top-0 right-0 bg-red-500 rounded-full text-white w-4 h-4 text-xs flex items-center justify-center">
-                                                    {cartItems.length}
-                                                </span>
+                                                    <Link href="/account/Register">
+                                                        {" "}
+                                                        <button className="block w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
+                                                            Register
+                                                        </button>
+                                                    </Link>
+                                                </>
+                                            )}
+
+                                            {auth_token && (
+                                                <>
+                                                    <Link href="../account/MyAccount">
+                                                        {" "}
+                                                        <button className="block w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
+                                                            Profile
+                                                        </button>
+                                                    </Link>
+
+                                                    <button
+                                                        onClick={signOutSubmitHandler}
+                                                        className="block w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+                                                    >
+                                                        Signout
+                                                    </button>
+                                                </>
                                             )}
                                         </div>
+                                    )}
+                                </div>
 
-                                        {isOpen && (
-                                            <div className="absolute container whitespace-nowrap flex justify-center items-center right-0 z-50 w-auto bg-gray-500 bg-opacity-75 rounded shadow-lg ">
-                                                <div className="bg-white rounded shadow-lg">
-                                                    <table className="w-full">
-                                                        <tbody>
-                                                            {cart?.cartItems?.map((cartItem) => (
-                                                                <tr
-                                                                    key={cartItem.product_id}
-                                                                    className="border-b border-gray-300"
-                                                                >
-                                                                    <td className="py-2 pl-4">
-                                                                        <img
-                                                                            src={`${Constants.BASE_URL}/images/uploads/product_thumb/${cartItem.image.photo}`}
-                                                                            alt={cartItem.name}
-                                                                            className="w-16 h-16 object-cover rounded"
-                                                                        />
-                                                                    </td>
-                                                                    <td className="p-2">{cartItem.name}</td>
-                                                                    <td className="p-2">{cartItem.quantity}</td>
-                                                                    <td className="p-2">
-                                                                        BDT {cartItem.total_price}{" "}
-                                                                    </td>
-                                                                    <td className="p-2">
-                                                                        <button
-                                                                            className="text-gray-500 hover:text-red-500"
-                                                                            onClick={() =>
-                                                                                deleteItemFromCart(cartItem.product_id)
-                                                                            }
-                                                                        >
-                                                                            <AiTwotoneDelete
-                                                                                className="text-red-600"
-                                                                                size={24}
-                                                                            />
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            ))}
-                                                            <tr className="border-b border-gray-300">
-                                                                <td
-                                                                    colSpan="5"
-                                                                    className="p-2 pt-3 flex justify-between items-center"
-                                                                >
-                                                                    <Link href="/cart">
-                                                                        <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded mr-2">
-                                                                            View Cart
-                                                                        </button>
-                                                                    </Link>
-                                                                    <Link href="/checkout">
-                                                                        <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">
-                                                                            Checkout
-                                                                        </button>
-                                                                    </Link>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                                <button
+                                    type="button"
+                                    onClick={handleButtonClick}
+                                    className=""
+                                >
+                                    <div className='px-2 flex flex-col items-center text-center'>
+                                        <FaHeart className="h-8 w-8 text-red-500" aria-hidden="true" />
+                                        <span className="text-sm mt-2 font-semibold text-gray-700">Wishlist</span>
+                                    </div>
+                                    {auth_token && <span>{wlist?.length || 0}</span>}
+                                </button>
+
+                                <div className="relative" ref={cartRef}>
+                                    <div className="relative">
+                                        <button
+                                            onClick={handleCartClick}
+                                            type="button"
+                                        >
+                                            <div className='px-2 flex flex-col items-center text-center'>
+                                                <HiShoppingCart className="h-8 w-8 text-blue-500" aria-hidden="true" />
+                                                <span className="text-sm mt-2 font-semibold text-gray-700">Cart</span>
                                             </div>
+                                        </button>
+                                        {cartItems?.length > 0 && (
+                                            <span className="absolute top-0 right-0 bg-red-500 rounded-full text-white w-4 h-4 text-xs flex items-center justify-center">
+                                                {cartItems.length}
+                                            </span>
                                         )}
                                     </div>
 
-                                </div>
-                            </div>
-                        </div>
-                        {/* Mid Header end */}
-                        {/* menu */}
-                        <div className='flex flex-auto gap-2 justify-between items-center mt-3'>
-                            <nav className="">
-                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                    <div className="flex items-center justify-between h-16 ">
-                                        <div className="hidden md:block">
-                                            <div className="ml-4 flex items-center place-content-center relative">
-                                                <Link
-                                                    href="/"
-                                                    className=" inline-flex items-center text-black-300 hover:text-white hover:bg-black px-3 py-2 rounded-md text-sm font-medium"
-                                                >
-                                                    <FaHome className="text-xl" />
-                                                </Link>
-                                                <Bedding />
-                                                <LivingDecor />
-                                                <BathSupport />
-                                                <KitchenDinning />
-                                                <Link
-                                                    href="/Shop"
-                                                    className="inline-flex items-center text-black-300 hover:text-white hover:bg-black px-3 py-2 rounded-md text-sm font-medium"
-                                                >
-                                                    <FaLeaf className="mr-2" />
-                                                    Home Decor
-                                                </Link>
-
-                                                <Link
-                                                    href="/GetAQuote"
-                                                    className="inline-flex items-center text-black-300 hover:text-white hover:bg-black px-3 py-2 rounded-md text-sm font-medium"
-                                                >
-                                                    Get a Quote
-                                                </Link>
-
+                                    {isOpen && (
+                                        <div className="absolute container whitespace-nowrap flex justify-center items-center right-0 z-50 w-auto bg-gray-500 bg-opacity-75 rounded shadow-lg ">
+                                            <div className="bg-white rounded shadow-lg">
+                                                <table className="w-full">
+                                                    <tbody>
+                                                        {cart?.cartItems?.map((cartItem) => (
+                                                            <tr
+                                                                key={cartItem.product_id}
+                                                                className="border-b border-gray-300"
+                                                            >
+                                                                <td className="py-2 pl-4">
+                                                                    <img
+                                                                        src={`${Constants.BASE_URL}/images/uploads/product_thumb/${cartItem.image.photo}`}
+                                                                        alt={cartItem.name}
+                                                                        className="w-16 h-16 object-cover rounded"
+                                                                    />
+                                                                </td>
+                                                                <td className="p-2">{cartItem.name}</td>
+                                                                <td className="p-2">{cartItem.quantity}</td>
+                                                                <td className="p-2">
+                                                                    BDT {cartItem.total_price}{" "}
+                                                                </td>
+                                                                <td className="p-2">
+                                                                    <button
+                                                                        className="text-gray-500 hover:text-red-500"
+                                                                        onClick={() =>
+                                                                            deleteItemFromCart(cartItem.product_id)
+                                                                        }
+                                                                    >
+                                                                        <AiTwotoneDelete
+                                                                            className="text-red-600"
+                                                                            size={24}
+                                                                        />
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        ))}
+                                                        <tr className="border-b border-gray-300">
+                                                            <td
+                                                                colSpan="5"
+                                                                className="p-2 pt-3 flex justify-between items-center"
+                                                            >
+                                                                <Link href="/cart">
+                                                                    <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded mr-2">
+                                                                        View Cart
+                                                                    </button>
+                                                                </Link>
+                                                                <Link href="/checkout">
+                                                                    <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">
+                                                                        Checkout
+                                                                    </button>
+                                                                </Link>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
-                                        <div className="-mr-2 flex md:hidden">
-                                            <button
-                                                onClick={handleMenuClick}
-                                                type="button"
-                                                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
-                                            >
-                                                {isMenuOpen ? <FaTimes /> : <FaBars />}
-                                            </button>
-                                        </div>
-                                    </div>
+                                    )}
                                 </div>
-                                {isMenuOpen && (
-                                    <div className="md:hidden">
-                                        <div className="px-2 pt-2 pb-3 sm:px-3">
+
+                            </div>
+                        </div>
+                    </div>
+                    {/* Mid Header end */}
+                    {/* menu */}
+                    <div className='flex flex-auto gap-2 justify-between items-center mt-3'>
+                        <nav className="">
+                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div className="flex items-center justify-between h-16 ">
+                                    <div className="hidden md:block">
+                                        <div className="ml-4 flex items-center place-content-center relative">
                                             <Link
                                                 href="/"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                                className=" inline-flex items-center text-black-300 hover:text-white hover:bg-black px-3 py-2 rounded-md text-sm font-medium"
                                             >
                                                 <FaHome className="text-xl" />
                                             </Link>
+                                            <Bedding />
+                                            <LivingDecor />
+                                            <BathSupport />
+                                            <KitchenDinning />
                                             <Link
                                                 href="/Shop"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                                className="inline-flex items-center text-black-300 hover:text-white hover:bg-black px-3 py-2 rounded-md text-sm font-medium"
                                             >
-                                                Bedding
-                                            </Link>
-                                            <Link
-                                                href="/Shop"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
-                                            >
-                                                Living Decor
-                                            </Link>
-                                            <Link
-                                                href="/Shop"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
-                                            >
-                                                Bath Support
-                                            </Link>
-                                            <Link
-                                                href="/Shop"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
-                                            >
-                                                Kitchen | Dining
-                                            </Link>
-                                            <Link
-                                                href="/"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
-                                            >
+                                                <FaLeaf className="mr-2" />
                                                 Home Decor
                                             </Link>
-                                            <Link
-                                                href="/Contact"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
-                                            >
-                                                Contact Us
-                                            </Link>
+
                                             <Link
                                                 href="/GetAQuote"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                                className="inline-flex items-center text-black-300 hover:text-white hover:bg-black px-3 py-2 rounded-md text-sm font-medium"
                                             >
                                                 Get a Quote
                                             </Link>
-                                            <Link
-                                                href="/"
-                                                className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
-                                            >
-                                                Find A Store
-                                            </Link>
-                                            <div className="relative" ref={cartRef}>
-                                                <div className="relative">
-                                                    <button
-                                                        onClick={handleCartClick}
-                                                        type="button"
-                                                        className="ml-3 text-white bg-[#009688] hover:bg-[#86efac] focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-3 md:mr-0 dark:bg-[#15803d] dark:hover:bg-[#15803d] dark:focus:ring-green-800"
-                                                    >
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none"
-                                                            viewBox="0 0 24 24"
-                                                            strokeWidth={1.5}
-                                                            stroke="currentColor"
-                                                            className="w-4 h-4"
-                                                        >
-                                                            <path
-                                                                strokeLinecap="round"
-                                                                strokeLinejoin="round"
-                                                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                                                            />
-                                                        </svg>
-                                                    </button>
-                                                    {cartItems?.length > 0 && (
-                                                        <span className="absolute top-0 right-0 bg-red-500 rounded-full text-white w-4 h-4 text-xs flex items-center justify-center">
-                                                            {cartItems.length}
-                                                        </span>
-                                                    )}
-                                                </div>
 
-                                                {isOpen && (
-                                                    <div className="absolute whitespace-nowrap flex justify-center items-center right-150 z-50 w-full bg-gray-500 bg-opacity-75 rounded shadow-lg ">
-                                                        <div className="bg-white rounded shadow-lg">
-                                                            <table className="w-full">
-                                                                <tbody>
-                                                                    {cart?.cartItems?.map((cartItem) => (
-                                                                        <tr
-                                                                            key={cartItem.product_id}
-                                                                            className="border-b border-gray-300"
-                                                                        >
-                                                                            <td className="py-2 pl-4">
-                                                                                <img
-                                                                                    src={`${Constants.BASE_URL}/images/uploads/product_thumb/${cartItem.image.photo}`}
-                                                                                    alt={cartItem.name}
-                                                                                    className="w-16 h-16 object-cover rounded"
-                                                                                />
-                                                                            </td>
-                                                                            <td className="p-2">{cartItem.name}</td>
-                                                                            <td className="p-2">{cartItem.quantity}</td>
-                                                                            <td className="p-2">
-                                                                                BDT {cartItem.total_price}{" "}
-                                                                            </td>
-                                                                            <td className="p-2">
-                                                                                <button
-                                                                                    className="text-gray-500 hover:text-red-500"
-                                                                                    onClick={() =>
-                                                                                        deleteItemFromCart(cartItem.product_id)
-                                                                                    }
-                                                                                >
-                                                                                    <AiTwotoneDelete
-                                                                                        className="text-red-600"
-                                                                                        size={24}
-                                                                                    />
-                                                                                </button>
-                                                                            </td>
-                                                                        </tr>
-                                                                    ))}
-                                                                    <tr className="border-b border-gray-300">
-                                                                        <td
-                                                                            colSpan="5"
-                                                                            className="p-2 pt-3 flex justify-between items-center"
-                                                                        >
-                                                                            <Link href="/cart">
-                                                                                <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded mr-2">
-                                                                                    View Cart
-                                                                                </button>
-                                                                            </Link>
-                                                                            <Link href="/checkout">
-                                                                                <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">
-                                                                                    Checkout
-                                                                                </button>
-                                                                            </Link>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
                                         </div>
                                     </div>
-                                )}
-                            </nav>
-                            <div className='mx-auto'> 24/7 customer service <a href="tel:+8801616101090">+8801971663839</a></div>
-                        </div>
-                        {/* menu end */}
-                    </div>
-                </div>
+                                    <div className="-mr-2 flex md:hidden">
+                                        <button
+                                            onClick={handleMenuClick}
+                                            type="button"
+                                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+                                        >
+                                            {isMenuOpen ? <FaTimes /> : <FaBars />}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            {isMenuOpen && (
+                                <div className="md:hidden">
+                                    <div className="px-2 pt-2 pb-3 sm:px-3">
+                                        <Link
+                                            href="/"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            <FaHome className="text-xl" />
+                                        </Link>
+                                        <Link
+                                            href="/Shop"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Bedding
+                                        </Link>
+                                        <Link
+                                            href="/Shop"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Living Decor
+                                        </Link>
+                                        <Link
+                                            href="/Shop"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Bath Support
+                                        </Link>
+                                        <Link
+                                            href="/Shop"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Kitchen | Dining
+                                        </Link>
+                                        <Link
+                                            href="/"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Home Decor
+                                        </Link>
+                                        <Link
+                                            href="/Contact"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Contact Us
+                                        </Link>
+                                        <Link
+                                            href="/GetAQuote"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Get a Quote
+                                        </Link>
+                                        <Link
+                                            href="/"
+                                            className="text-black-300 hover:text-white hover:bg-black block px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Find A Store
+                                        </Link>
+                                        <div className="relative" ref={cartRef}>
+                                            <div className="relative">
+                                                <button
+                                                    onClick={handleCartClick}
+                                                    type="button"
+                                                    className="ml-3 text-white bg-[#009688] hover:bg-[#86efac] focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-3 md:mr-0 dark:bg-[#15803d] dark:hover:bg-[#15803d] dark:focus:ring-green-800"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        strokeWidth={1.5}
+                                                        stroke="currentColor"
+                                                        className="w-4 h-4"
+                                                    >
+                                                        <path
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                                                        />
+                                                    </svg>
+                                                </button>
+                                                {cartItems?.length > 0 && (
+                                                    <span className="absolute top-0 right-0 bg-red-500 rounded-full text-white w-4 h-4 text-xs flex items-center justify-center">
+                                                        {cartItems.length}
+                                                    </span>
+                                                )}
+                                            </div>
 
+                                            {isOpen && (
+                                                <div className="absolute whitespace-nowrap flex justify-center items-center right-150 z-50 w-full bg-gray-500 bg-opacity-75 rounded shadow-lg ">
+                                                    <div className="bg-white rounded shadow-lg">
+                                                        <table className="w-full">
+                                                            <tbody>
+                                                                {cart?.cartItems?.map((cartItem) => (
+                                                                    <tr
+                                                                        key={cartItem.product_id}
+                                                                        className="border-b border-gray-300"
+                                                                    >
+                                                                        <td className="py-2 pl-4">
+                                                                            <img
+                                                                                src={`${Constants.BASE_URL}/images/uploads/product_thumb/${cartItem.image.photo}`}
+                                                                                alt={cartItem.name}
+                                                                                className="w-16 h-16 object-cover rounded"
+                                                                            />
+                                                                        </td>
+                                                                        <td className="p-2">{cartItem.name}</td>
+                                                                        <td className="p-2">{cartItem.quantity}</td>
+                                                                        <td className="p-2">
+                                                                            BDT {cartItem.total_price}{" "}
+                                                                        </td>
+                                                                        <td className="p-2">
+                                                                            <button
+                                                                                className="text-gray-500 hover:text-red-500"
+                                                                                onClick={() =>
+                                                                                    deleteItemFromCart(cartItem.product_id)
+                                                                                }
+                                                                            >
+                                                                                <AiTwotoneDelete
+                                                                                    className="text-red-600"
+                                                                                    size={24}
+                                                                                />
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                ))}
+                                                                <tr className="border-b border-gray-300">
+                                                                    <td
+                                                                        colSpan="5"
+                                                                        className="p-2 pt-3 flex justify-between items-center"
+                                                                    >
+                                                                        <Link href="/cart">
+                                                                            <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded mr-2">
+                                                                                View Cart
+                                                                            </button>
+                                                                        </Link>
+                                                                        <Link href="/checkout">
+                                                                            <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">
+                                                                                Checkout
+                                                                            </button>
+                                                                        </Link>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </nav>
+                        <div className='mx-auto'> 24/7 customer service <a href="tel:+8801616101090">+8801971663839</a></div>
+                    </div>
+                    {/* menu end */}
+                </div>
             </div>
 
             {showPopup ? (
