@@ -29,7 +29,7 @@ const DesignOne = () => {
             </p>
 
             {/* Image like stamp or chop */}
-            <div className="absolute bottom-0 right-0 -mb-12 -mr-24">
+            <div className="absolute bottom-0 right-0 -mb-24 md:-mb-12 mr-0 md:-mr-24">
               <img src="images/bestql.png" alt="Stamp" className="w-28 h-auto" />
             </div>
           </div>
