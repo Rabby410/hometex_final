@@ -31,6 +31,7 @@ import WishListContext from "@/context/WishListContext";
 import CartContext from "@/context/CartContext";
 import Modal from "./Modal";
 import Swal from 'sweetalert2';
+import DynamicText from './DynamicText';
 
 const Header3 = () => {
     const [isModalOpen, setIsModalOpen] = useState(true);
@@ -217,31 +218,39 @@ const Header3 = () => {
     };
     return (
         <>
-            <div className='pt-2 hidden md:block'>
-                <div className='container mx-auto pb-2' >
-                    {/* Pre Header */}
-                    <div className='flex flex-auto justify-between items-center'>
-                        <div className='flex flex-auto px-2 items-center '>
-                            <span className='border border-gray-600 mx-3 px-3 py-1 hover:bg-gray-600 hover:text-white'>Visit Us</span>
-                            <p>Adorn Your Home With Style!</p>
+            <div className="pt-2 hidden md:block">
+                <div className="container mx-auto pb-2">
+                    <div className="flex justify-between items-center">
+                        <div className="flex items-center px-2">
+                            <span className="border border-gray-600 mx-3 px-3 py-1 hover:bg-gray-600 hover:text-white cursor-pointer">Visit Us</span>
+                            <DynamicText />
                         </div>
 
-                        <div className='flex flex-auto items-center'>
-                            
-                            <Link href="/GetAQuote" className='flex flex-auto items-center gap-1'><HiOutlineMail /> Corporate Inquaries</Link>
-                            <div className='flex flex-auto items-center gap-1'><HiOutlineTicket /> Order Tracking </div>
-                            <div className='flex flex-auto items-center gap-1'><HiOutlineGift /> My Rewards </div>
-                            <div className='flex flex-auto items-center gap-1'><FaShippingFast /> Shipping </div>
+                        <div className="flex items-center gap-3"> {/* Adjusted gap size for overall spacing */}
+                            <Link href="/GetAQuote" className="flex items-center hover:text-blue-500">
+                                <HiOutlineMail className="mr-2" /> Corporate Inquiries {/* Added mr-2 for margin right */}
+                            </Link>
+                            <div className="flex items-center hover:text-blue-500">
+                                <HiOutlineTicket className="mr-2" /> Order Tracking
+                            </div>
+                            <div className="flex items-center hover:text-blue-500">
+                                <HiOutlineGift className="mr-2" /> My Rewards
+                            </div>
+                            <div className="flex items-center hover:text-blue-500">
+                                <FaShippingFast className="mr-2" /> Shipping
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+
             {/* Pre Header end */}
             <div className='pt-1 hidden md:block sticky top-0 z-20' style={{ background: "radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)" }}>
                 <div className='container mx-auto'>
                     {/* Mid Header */}
-                    <div className='flex flex-auto gap-2 justify-between items-center mt-3 max-w-7xl mx-auto' >
+                    <div className='flex flex-auto gap-2 justify-between items-center mt-3 container mx-auto' >
                         <div className='flex flex-row'>
                             <div className='px-2 flex flex-col items-center text-center'>
                                 <FaMapMarkerAlt className="h-8 w-8 text-red-600" aria-hidden="true" />
@@ -435,7 +444,7 @@ const Header3 = () => {
                     </div>
                     {/* Mid Header end */}
                     {/* menu */}
-                    <div className='flex flex-auto gap-2 justify-between items-center mt-3'>
+                    <div className='flex flex-auto gap-2 container mx-auto justify-between items-center mt-3'>
                         <nav className="">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <div className="flex items-center justify-between h-16 ">
@@ -629,7 +638,7 @@ const Header3 = () => {
                                 </div>
                             )}
                         </nav>
-                        <div className='mx-auto'> 24/7 customer service <a href="tel:+8801616101090">+8801971663839</a></div>
+                        <div className='text-black-300 font-medium mr-3'> 24/7 customer service <a href="tel:+8801616101090">+8801971663839</a></div>
                     </div>
                     {/* menu end */}
                 </div>
