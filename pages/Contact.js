@@ -157,9 +157,10 @@ const Contact = () => {
                   <h4 className="font-semibold text-lg text-gray-800">
                     Hotline
                   </h4>
-                  <p className="text-gray-500">(+88) 09666 666 666</p>
+                  <p className="text-gray-500">(+88) 096 1096 3839</p>
+                  <p className="text-gray-500">(+88) 016 1610 1090</p>
                   <p className="text-gray-500">
-                    7 days a week, 10:00am to 8:00pm (BST)
+                    7 days a week, 10:00am to 10:00pm (BST)
                   </p>
                 </div>
               </div>
@@ -182,16 +183,16 @@ const Contact = () => {
                   <h4 className="font-semibold text-lg text-gray-800">
                     WhatsApp
                   </h4>
-                  <p className="text-gray-500">(+88) 09666 666 666</p>
+                  <p className="text-gray-500">(+88) 019 7466 3839</p>
                   <p className="text-gray-500">
-                    6 days a week (Saturday to Thursday), 10:00 am to 7:00 pm
+                    7 days a week (Saturday to Thursday), 10:00 am to 10:00pm
                     (BST)
                   </p>
                   <a
-                    href="wa.me/+8801616101090"
+                    href="https://wa.me/+880174663839"
                     className="underline text-gray-500"
                   >
-                    clickhere to live chate
+                    click here to live chat
                   </a>
                 </div>
               </div>

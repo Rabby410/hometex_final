@@ -31,7 +31,7 @@ import WishListContext from "@/context/WishListContext";
 import CartContext from "@/context/CartContext";
 import Modal from "./Modal";
 import Swal from 'sweetalert2';
-import DynamicText from './DynamicText';
+import DynamicText, { textOptions } from './DynamicText';
 
 const Header3 = () => {
     const [isModalOpen, setIsModalOpen] = useState(true);
@@ -216,35 +216,52 @@ const Header3 = () => {
     const toggleSubMenu = (menuKey) => {
         setSubMenuOpen((prev) => ({ ...prev, [menuKey]: !prev[menuKey] }));
     };
+
+    const [visitUsText, setVisitUsText] = useState(textOptions ? textOptions[0].visitUs : '');
+    const handleTextChange = (newVisitUsText) => {
+        setVisitUsText(newVisitUsText);
+
+    };
     return (
         <>
             <div className="pt-2 hidden md:block">
                 <div className="container mx-auto pb-2">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center px-2">
-                            <span className="border border-gray-600 mx-3 px-3 py-1 hover:bg-gray-600 hover:text-white cursor-pointer">Visit Us</span>
-                            <DynamicText />
+                            <span className="mx-3 px-3 py-1 cursor-pointer text-white font-medium
+                                bg-gradient-to-r from-purple-500 to-pink-500
+                                hover:from-pink-500 hover:to-purple-500
+                                border-0 rounded-lg shadow-md
+                                transition-all duration-300 ease-in-out">
+                                {visitUsText}
+                            </span>
+                            <div className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500
+                                hover:from-blue-500 hover:to-green-400
+                                transition-all duration-300 ease-in-out">
+                                <DynamicText onTextChange={handleTextChange} />
+                            </div>
                         </div>
 
-                        <div className="flex items-center gap-3"> {/* Adjusted gap size for overall spacing */}
+
+                        <div className="flex items-center gap-3 mr-8"> {/* Adjusted gap size for overall spacing */}
                             <Link href="/GetAQuote" className="flex items-center hover:text-blue-500">
-                                <HiOutlineMail className="mr-2" /> Corporate Inquiries {/* Added mr-2 for margin right */}
+                                <HiOutlineMail className="mr-2 " style={{ width: "22px", height: "22px", color: "pink" }} /> Corporate Inquiries {/* Added mr-2 for margin right */}
                             </Link>
                             <div className="flex items-center hover:text-blue-500">
-                                <HiOutlineTicket className="mr-2" /> Order Tracking
+                                <HiOutlineTicket className="mr-2" style={{ width: "22px", height: "22px", color: "pink" }} /> Order Tracking
                             </div>
                             <div className="flex items-center hover:text-blue-500">
-                                <HiOutlineGift className="mr-2" /> My Rewards
+                                <HiOutlineGift className="mr-2" style={{ width: "22px", height: "22px", color: "pink" }} /> My Rewards
                             </div>
                             <div className="flex items-center hover:text-blue-500">
-                                <FaShippingFast className="mr-2" /> Shipping
+                                <FaShippingFast className="mr-2" style={{ width: "22px", height: "22px", color: "pink" }} /> Shipping
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             {/* Pre Header end */}
-            
+
             <div className='pt-1 hidden md:block sticky top-0 z-20' style={{ background: "radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)" }}>
                 <div className='container mx-auto px-5'>
                     {/* Mid Header */}
@@ -287,7 +304,7 @@ const Header3 = () => {
                             </Link>
                         </div>
                         <div>
-                            <div className='flex flex-row'>
+                            <div className='flex flex-row gap-8'>
                                 <div className='px-2 flex flex-col items-center text-center'>
                                     <FaSearch className="h-6 w-6 text-blue-600" aria-hidden="true" />
                                     <span className="text-sm mt-2 font-semibold text-gray-800">Search</span>
@@ -442,10 +459,10 @@ const Header3 = () => {
                     </div>
                     {/* Mid Header end */}
                     {/* menu */}
-                    <div className='flex flex-auto gap-2 container mx-auto justify-between items-center'>
+                    <div className='flex flex-auto gap-2 container mx-auto justify-end items-center'>
                         <nav className="">
                             <div className="container mx-auto px-4 sm:px-6 lg:px-0">
-                                <div className="flex items-center justify-between h-16 ">
+                                <div className="flex items-center justify-between h-16 " style={{ marginRight: "240px" }}>
                                     <div className="hidden md:block">
                                         <div className="flex items-center place-content-center relative">
                                             <Link
