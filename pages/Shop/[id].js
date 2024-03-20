@@ -109,7 +109,7 @@ const Product = ({ product }) => {
     let obj_key = [];
     for (let x in recentitems) {
       let txt = recentitems[x];
-      if (txt.id == product.id) {
+      if (txt?.id == product.id) {
         is_exist = true;
         obj_key.push(x);
       }

@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "cookies-next": "^2.1.1",
+    "emailjs-com": "^3.2.0",
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
+    "react-image-magnify": "^2.7.4",
     "react-rating-stars-component": "^2.2.0",
     "react-tabs": "^6.0.0",
     "sweetalert2": "^11.10.5",

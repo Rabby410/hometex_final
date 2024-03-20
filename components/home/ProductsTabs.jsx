@@ -131,7 +131,7 @@ const ProductsTabs = ({ products }) => {
                               activeColor="#ffd700"
                             />
                            
-                      <Link href={`/Shop/${product.id}`}><h5 className="text-l font-semibold tracking-tight text-gray-900 dark:text-white">
+                      <Link href={`/Shop/product/${product.id}`}><h5 className="text-l font-semibold tracking-tight text-gray-900 dark:text-white">
                               {product.name}
                             </h5>
                             <div className="flex items-center justify-between">

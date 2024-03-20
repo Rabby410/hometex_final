@@ -243,35 +243,33 @@ const Header3 = () => {
                     </div>
                 </div>
             </div>
-
-
-
             {/* Pre Header end */}
+            
             <div className='pt-1 hidden md:block sticky top-0 z-20' style={{ background: "radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)" }}>
-                <div className='container mx-auto'>
+                <div className='container mx-auto px-5'>
                     {/* Mid Header */}
                     <div className='flex flex-auto gap-2 justify-between items-center mt-3 container mx-auto' >
                         <div className='flex flex-row'>
                             <div className='px-2 flex flex-col items-center text-center'>
-                                <FaMapMarkerAlt className="h-8 w-8 text-red-600" aria-hidden="true" />
+                                <FaMapMarkerAlt className="h-6 w-6 text-red-600" aria-hidden="true" />
                                 <span className="text-sm mt-2 font-semibold text-gray-800">Find A Store</span>
                             </div>
 
                             <Link href="/Contact">
                                 <div className='px-2 flex flex-col items-center text-center'>
-                                    <FaPhoneSquareAlt className="h-8 w-8 text-blue-600" aria-hidden="true" />
+                                    <FaPhoneSquareAlt className="h-6 w-6 text-blue-600" aria-hidden="true" />
                                     <span className="text-sm mt-2 font-semibold text-gray-800">Customer Service</span>
                                 </div>
                             </Link>
 
                             <div className='px-2 flex flex-col items-center text-center'>
-                                <HiOutlineGift className="h-8 w-8 text-red-500" aria-hidden="true" />
+                                <HiOutlineGift className="h-6 w-6 text-red-500" aria-hidden="true" />
                                 <span className="text-sm mt-2 font-semibold text-gray-800">Gift Someone!</span>
                             </div>
 
                             <button onClick={() => setIsModalOpen(true)}>
                                 <div className='px-2 flex flex-col items-center text-center'>
-                                    <FaMoneyCheckAlt className="h-8 w-8 text-green-500" aria-hidden="true" />
+                                    <FaMoneyCheckAlt className="h-6 w-6 text-green-500" aria-hidden="true" />
                                     <span className="text-sm mt-2 font-semibold text-gray-800">Daily Deals</span>
                                 </div>
                             </button>
@@ -283,7 +281,7 @@ const Header3 = () => {
                             />
 
                         </div>
-                        <div className='justify-center w-full md:w-auto'>
+                        <div className='justify-center w-full md:w-24'>
                             <Link href="/" className="flex justify-center">
                                 <img src="/images/hometex-logo.png" alt="Hometex Bangladesh" />
                             </Link>
@@ -291,7 +289,7 @@ const Header3 = () => {
                         <div>
                             <div className='flex flex-row'>
                                 <div className='px-2 flex flex-col items-center text-center'>
-                                    <FaSearch className="h-8 w-8 text-blue-600" aria-hidden="true" />
+                                    <FaSearch className="h-6 w-6 text-blue-600" aria-hidden="true" />
                                     <span className="text-sm mt-2 font-semibold text-gray-800">Search</span>
                                 </div>
 
@@ -303,7 +301,7 @@ const Header3 = () => {
                                         onClick={toggleDropdown}
                                     >
                                         <div className='px-2 flex flex-col items-center text-center'>
-                                            <FaUserAlt className="h-8 w-8 text-gray-600" aria-hidden="true" />
+                                            <FaUserAlt className="h-6 w-6 text-gray-600" aria-hidden="true" />
                                             <span className="text-sm mt-2 font-semibold text-gray-800">My Account</span>
                                         </div>
                                     </button>
@@ -354,7 +352,7 @@ const Header3 = () => {
                                     className=""
                                 >
                                     <div className='px-2 flex flex-col items-center text-center'>
-                                        <FaHeart className="h-8 w-8 text-red-500" aria-hidden="true" />
+                                        <FaHeart className="h-6 w-6 text-red-500" aria-hidden="true" />
                                         <span className="text-sm mt-2 font-semibold text-gray-700">Wishlist</span>
                                     </div>
                                     {auth_token && <span>{wlist?.length || 0}</span>}
@@ -367,7 +365,7 @@ const Header3 = () => {
                                             type="button"
                                         >
                                             <div className='px-2 flex flex-col items-center text-center'>
-                                                <HiShoppingCart className="h-8 w-8 text-blue-500" aria-hidden="true" />
+                                                <HiShoppingCart className="h-6 w-6 text-blue-500" aria-hidden="true" />
                                                 <span className="text-sm mt-2 font-semibold text-gray-700">Cart</span>
                                             </div>
                                         </button>
@@ -444,12 +442,12 @@ const Header3 = () => {
                     </div>
                     {/* Mid Header end */}
                     {/* menu */}
-                    <div className='flex flex-auto gap-2 container mx-auto justify-between items-center mt-3'>
+                    <div className='flex flex-auto gap-2 container mx-auto justify-between items-center'>
                         <nav className="">
-                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="container mx-auto px-4 sm:px-6 lg:px-0">
                                 <div className="flex items-center justify-between h-16 ">
                                     <div className="hidden md:block">
-                                        <div className="ml-4 flex items-center place-content-center relative">
+                                        <div className="flex items-center place-content-center relative">
                                             <Link
                                                 href="/"
                                                 className=" inline-flex items-center text-black-300 hover:text-white hover:bg-black px-3 py-2 rounded-md text-sm font-medium"
@@ -466,13 +464,6 @@ const Header3 = () => {
                                             >
                                                 <FaLeaf className="mr-2" />
                                                 Home Decor
-                                            </Link>
-
-                                            <Link
-                                                href="/GetAQuote"
-                                                className="inline-flex items-center text-black-300 hover:text-white hover:bg-black px-3 py-2 rounded-md text-sm font-medium"
-                                            >
-                                                Get a Quote
                                             </Link>
 
                                         </div>
@@ -638,7 +629,8 @@ const Header3 = () => {
                                 </div>
                             )}
                         </nav>
-                        <div className='text-black-300 font-medium mr-3'> 24/7 customer service <a href="tel:+8801616101090">+8801971663839</a></div>
+                        <a href="tel:+8801616101090" class="inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white font-semibold py-2 px-4 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 cursor-pointer">Contact Us</a>
+
                     </div>
                     {/* menu end */}
                 </div>
