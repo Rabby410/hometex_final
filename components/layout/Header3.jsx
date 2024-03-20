@@ -250,9 +250,12 @@ const Header3 = () => {
                             <div className="flex items-center hover:text-blue-500">
                                 <HiOutlineTicket className="mr-2" style={{ width: "22px", height: "22px", color: "pink" }} /> Order Tracking
                             </div>
-                            <div className="flex items-center hover:text-blue-500">
-                                <HiOutlineGift className="mr-2" style={{ width: "22px", height: "22px", color: "pink" }} /> My Rewards
+                            <div className="relative bg-black text-white px-2 pt-2 pb-3 flex items-center">
+                                <HiOutlineGift className="mr-2 text-pink-500" style={{ width: "22px", height: "22px" }} />
+                                My Rewards
+                                <div className="absolute bottom-0 left-0 right-0 h-2 bg-repeat-x" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 10 10\'%3E%3Cpolygon points=\'0,10 5,0 10,10\' style=\'fill:%23ffffff;\'/%3E%3C/svg%3E")', backgroundSize: 'auto 100%' }}></div>
                             </div>
+
                             <div className="flex items-center hover:text-blue-500">
                                 <FaShippingFast className="mr-2" style={{ width: "22px", height: "22px", color: "pink" }} /> Shipping
                             </div>
