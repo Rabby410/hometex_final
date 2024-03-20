@@ -6,7 +6,6 @@ import RecentView from "@/components/home/sticky/RecentView";
 import Constants from "@/ults/Constant";
 import { CiStar } from "react-icons/ci";
 import { FaShoppingBasket } from "react-icons/fa";
-import ReactImageMagnify from "react-image-magnify";
 
 export async function getServerSideProps(context) {
   let id = context.query.id;
@@ -142,25 +141,13 @@ const Product = ({ product }) => {
               )}
             </div>
             <div>
-              {/* Main image with magnify effect */}
-              <ReactImageMagnify
-                {...{
-                  smallImage: {
-                    alt: "Primary Product Image",
-                    isFluidWidth: true,
-                    src: `${image_URL}/${
-                      selectedImage || product.primary_photo?.photo
-                    }`,
-                  },
-                  largeImage: {
-                    src: `${image_URL}/${
-                      selectedImage || product.primary_photo?.photo
-                    }`,
-                    width: 1200,
-                    height: 1800,
-                  },
-                  enlargedImagePosition: "over",
-                }}
+              {/* Main image without magnify effect */}
+              <img
+                alt="Primary Product Image"
+                src={`${image_URL}/${
+                  selectedImage || product.primary_photo?.photo
+                }`}
+                style={{ width: "100%" }} // This ensures the image is responsive and fits the container
               />
             </div>
           </div>
