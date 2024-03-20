@@ -245,10 +245,10 @@ const Header3 = () => {
 
                         <div className="flex items-center gap-3 mr-8"> {/* Adjusted gap size for overall spacing */}
                             <Link href="/GetAQuote" className="flex items-center hover:text-blue-500">
-                                <HiOutlineMail className="mr-2 " style={{ width: "22px", height: "22px", color: "pink" }} /> Corporate Inquiries {/* Added mr-2 for margin right */}
+                                <HiOutlineMail className="mr-2 text-pink-500" style={{ width: "22px", height: "22px" }} /> Corporate Inquiries {/* Added mr-2 for margin right */}
                             </Link>
                             <div className="flex items-center hover:text-blue-500">
-                                <HiOutlineTicket className="mr-2" style={{ width: "22px", height: "22px", color: "pink" }} /> Order Tracking
+                                <HiOutlineTicket className="mr-2 text-pink-500" style={{ width: "22px", height: "22px" }} /> Order Tracking
                             </div>
                             <div className="relative bg-black text-white px-2 pt-2 pb-3 flex items-center">
                                 <HiOutlineGift className="mr-2 text-pink-500" style={{ width: "22px", height: "22px" }} />
@@ -257,7 +257,7 @@ const Header3 = () => {
                             </div>
 
                             <div className="flex items-center hover:text-blue-500">
-                                <FaShippingFast className="mr-2" style={{ width: "22px", height: "22px", color: "pink" }} /> Shipping
+                                <FaShippingFast className="mr-2 text-pink-500" style={{ width: "22px", height: "22px" }} /> Shipping
                             </div>
                         </div>
                     </div>
