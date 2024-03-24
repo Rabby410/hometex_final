@@ -6,6 +6,7 @@ import RecentView from "@/components/home/sticky/RecentView";
 import Constants from "@/ults/Constant";
 import { CiStar } from "react-icons/ci";
 import { FaShoppingBasket } from "react-icons/fa";
+import ProductModal from "@/components/common/ProductModal";
 
 export async function getServerSideProps(context) {
   let id = context.query.id;
@@ -270,7 +271,11 @@ const Product = ({ product }) => {
               <img src="/images/productPage/100 c2.png" className="w-28 p-3" />
             </div>
           </div>
-          <div className="col-span-2">a</div>
+          <div className="col-span-2">
+            <div className="flex flex-col">
+              <ProductModal/>
+            </div>
+          </div>
         </div>
       </div>
     </>
